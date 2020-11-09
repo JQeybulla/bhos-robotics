@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baku Higher Oil School - Robotics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="plugins/css/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="{% static 'plugins/css/owl.carousel.min.css' %}">
+    <!-- <link rel="stylesheet" href="plugins/css/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="{% static 'plugins/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="plugins/css/aos.css">
+    <!-- <link rel="stylesheet" href="{% static 'plugins/css/aos.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    
+</head>
+<body data-aos="fade-down">
+    <header>
+        <div id="upper_nav">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <a target="_blank" href="http://www.bhos.edu.az/az/index">Baku Higher Oil School</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lower_nav">
+            <nav>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4 offset-lg-1 col-lg-2">
+                            <div class="logo">
+                                <a href="{% url 'core:home' %}"><img src="{% static 'assets/img/logo/bhos-logo.png' %}" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="menu_btn">
+                                <div class="burger_btn"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="navigation_bar">
+                                <ul>
+                                    <li><a href="{% url 'core:about' %}">About</a></li>
+                                    <li><a href="{% url 'core:research' %}">Research</a></li>
+                                    <li><a href="{% url 'core:vision' %}">Vision</a></li>
+                                    <li><a href="{% url 'core:news' %}">News</a></li>
+                                    <li><a href="{% url 'core:contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_navigation_bar">
+                                <ul>
+                                    <li><a href="{% url 'core:about' %}">About</a></li>
+                                    <li><a href="{% url 'core:research' %}">Research</a></li>
+                                    <li><a href="{% url 'core:vision' %}">Vision</a></li>
+                                    <li><a href="{% url 'core:news' %}">News</a></li>
+                                    <li><a href="{% url 'core:contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="greeting" style="background-image: url({{ greet.0.img.url }});">
+            <div class="container">
+                <div class="title">
+                    <div class="row">
+                        <h1>{{ greet.0.title }}</h2>
+                    </div>
+                    <div class="row">
+                        <h1>{{ greet.0.club_name }}</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="line"></div>
+
+        <!-- Project part begins -->
+        <section id="project">
+            <div class="container-fluid m-0 p-0">
+                <div class="project_slider owl-theme owl-carousel">
+                    <div class="project_item">
+                        <img src="{{ projects.0.img.url }}" alt="Project">
+                        <div class="project_bottom">
+                            <div class="background_opacity"></div>
+                            <h3>
+                                <a href="project-details.html">{{ projects.0.title }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="project_item">
+                        <img src="{{ projects.1.img.url }}" alt="Project">
+                        <div class="project_bottom">
+                            <div class="background_opacity"></div>
+                            <h3>
+                                <a href="project-details.html">{{ projects.1.title }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="project_item">
+                        <img src="{{ projects.2.img.url }}" alt="Project">
+                        <div class="project_bottom">
+                            <div class="background_opacity"></div>
+                            <h3>
+                                <a href="project-details.html">{{ projects.2.title }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="project_item">
+                        <img src="{{ projects.3.img.url }}" alt="Project">
+                        <div class="project_bottom">
+                            <div class="background_opacity"></div>
+                            <h3>
+                                <a href="project-details.html">{{ projects.3.title }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="project_item">
+                        <img src="{{ projects.4.img.url }}" alt="Project">
+                        <div class="project_bottom">
+                            <div class="background_opacity"></div>
+                            <h3>
+                                <a href="project-details.html">{{ projects.4.title }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project part ends -->
+
+        <!-- Project part begins -->
+        <section id="about" class="section_padding_bottom">
+            <div class="container-fluid m-0 p-0">
+                <div class="about_slider owl-theme owl-carousel">
+                    <div class="about_item colored">
+                        <div class="section_title">
+                            <span><i class="fas fa-users"></i></span>
+                            <h2>{{ greet.0.teacher_count }}</h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{ greet.0.about_teachers }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_item not_colored">
+                        <div class="section_title">
+                            <h2>{{ greet.0.club_name }} </h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{ greet.0.about_club }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_item colored">
+                        <div class="section_title">
+                            <span><i class="fas fa-users"></i></span>
+                            <h2>{{ greet.0.students_count }}</h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{ greet.0.about_students }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about_item not_colored">
+                        <div class="section_title">
+                            <h2>{{ greet.0.department_name }} </h2>
+                        </div>      
+                        <div class="section_content">
+                            <p>
+                                {{ greet.0.about_department }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project part ends -->
+
+        <section id="news_events" data-aos="fade-up"  style="background-image: url({% static 'assets/img/home/news-events.png' %});">
+
+            <div class="title">
+                <h1>News and Events</h1>
+            </div>
+
+            <div class="container pt-5">
+                <div class="row">
+
+                    <div id="instafeed-container"></div>
+
+                    <!-- <div class="col-lg-3">
+                        <div class="news_item">
+                            <div class="image">
+                                <img src="assets/img/article13524.largethumb.jpg" alt="">
+
+                                <div class="fade_image"></div>
+                            </div>
+                            <div class="news_detail">
+                                <span class="time">09 Sun,2012</span>
+                                <p class="content">Salam ay yetka necesen veziyyet necedi tipli auyes yarismasi</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+            <div class="container padding">
+                <div class="event_slider owl-theme owl-carousel">
+                    {% for event in events %}
+                    <div class="event_item">
+                        <div class="event_title">
+                            <p>{{event.title}}</p>
+                            <h2>
+                                {{event.body}} 
+                            </h2>
+                        </div>
+                        <div class="event_bottom">
+                            <span><i class="far fa-calendar-alt"></i></span>
+                            <p>{{ event.date }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="event_item">
+                        <div class="event_title">
+                            <p>{{events.1.title}}</p>
+                            <h2>
+                                {{events.1.body}}
+                            </h2>
+                        </div>
+                        <div class="event_bottom">
+                            <span><i class="far fa-calendar-alt"></i></span>
+                            <p>{{events.1.date}}</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <section id="university">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="name">
+                            <h5><a href="{% url 'core:home' %}">Baku Higher Oil School</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="icons">
+                            <ul>
+                                <li><a href="{{ links.0.facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="{{ links.0.instagram }}"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="{{ links.0.youtube }}"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="{{ links.0.linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="copyright">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h6><p>Copyright @2020 Developed by &nbsp; <a href="https://istechlal.com/" target="_blank"> Istechlal Group</a></p></h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- <script src="plugins/js/fontawesome.js"></script> -->
+    <!-- <script src="plugins/js/jquery.js"></script> -->
+    <!-- <script src="plugins/js/owl.carousel.min.js"></script> -->
+    <!-- <script src="plugins/js/instafeed.js"></script> -->
+    <!-- <script src="plugins/js/smoove.js"></script> -->
+    <!-- <script src="plugins/js/aos.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="{% static 'plugins/js/fontawesome.js' %}"></script>
+    <script src="{% static 'plugins/js/jquery.js' %}"></script>
+    <script src="{% static 'plugins/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'plugins/js/instafeed.js' %}"></script>
+    <script src="{% static 'plugins/js/smoove.js' %}"></script>
+    <script src="{% static 'plugins/js/aos.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
